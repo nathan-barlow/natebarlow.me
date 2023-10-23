@@ -14,10 +14,10 @@ General comments (optional).
 */
 
 /* Import normalize.css */
-@use 'normalize';
+@use "normalize";
 
 /* Import header/nav css */
-@use 'nav';
+@use "nav";
 
 /* Animations */
 @keyframes zoom {
@@ -49,13 +49,13 @@ General comments (optional).
 }
 
 .aligncenter,
-   div.aligncenter {
+div.aligncenter {
    display: block;
    margin: 5px auto 5px auto;
 }
 
 .alignright {
-   float:right;
+   float: right;
    margin: 5px 0 20px 20px;
 }
 
@@ -153,7 +153,8 @@ a img.aligncenter {
 }
 
 :root {
-   --font-system: "Outfit", -apple-system, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+   --font-system: "Outfit", -apple-system, Roboto, Oxygen-Sans, Ubuntu,
+      Cantarell, "Helvetica Neue", sans-serif;
    --hue: 233;
    --color-main-500: hsl(var(--hue), 100%, 38%); // main color, most contrast
    --color-main-700: hsl(var(--hue), 80%, 94%);
@@ -162,20 +163,20 @@ a img.aligncenter {
    --color-bg-transparent: hsla(var(--hue), 100%, 99%, 0.8);
    --color-text: black;
    --color-gray-500: hsl(0, 0%, 50%);
-   --color-error: hsla(0, 100%, 62%, 1.00);
-   --color-error-transparent: hsla(0, 100%, 62%, .2);
-   --color-success: hsla(148, 89%, 63%, 1.00);
-   --color-success-transparent: hsla(148, 89%, 63%, .2);
+   --color-error: hsla(0, 100%, 62%, 1);
+   --color-error-transparent: hsla(0, 100%, 62%, 0.2);
+   --color-success: hsla(148, 89%, 63%, 1);
+   --color-success-transparent: hsla(148, 89%, 63%, 0.2);
    --grid-columns-2: repeat(2, 1fr);
    --grid-columns-3: repeat(3, 1fr);
    --grid-columns-4: repeat(4, 1fr);
-   --border-radius: 10px;
+   --border-radius: 4px;
    --gap-lg: 40px;
    --gap: 20px;
    --gap-sm: 20px;
    --box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
    --mode: 0;
-   --transition: 500ms cubic-bezier(.8,0,.2,1);
+   --transition: 500ms cubic-bezier(0.8, 0, 0.2, 1);
 }
 
 /* dark mode */
@@ -223,7 +224,8 @@ a img.aligncenter {
    border-width: 0px;
    padding: 12px;
    cursor: pointer;
-   transition: opacity var(--transition), color var(--transition), transform var(--transition);
+   transition: opacity var(--transition), color var(--transition),
+      transform var(--transition);
    margin-left: auto;
    height: 42px;
    width: 42px;
@@ -330,7 +332,7 @@ h1,
 h2,
 .h2 {
    margin-top: calc(var(--gap) * 1.5);
-   margin-bottom: .5rem;
+   margin-bottom: 0.5rem;
 }
 
 h3,
@@ -352,7 +354,7 @@ p {
 
 p,
 li {
-   line-height: 1.5;
+   line-height: 1.7;
 }
 
 a {
@@ -367,7 +369,10 @@ footer a {
 a.inline,
 a[data-type="URL"] {
    text-decoration: none;
-   background-image: linear-gradient(var(--color-main-500), var(--color-main-500));
+   background-image: linear-gradient(
+      var(--color-main-500),
+      var(--color-main-500)
+   );
    background-position: left 100%;
    background-repeat: no-repeat;
    background-size: 100% 1px;
@@ -380,23 +385,24 @@ a[data-type="URL"] {
    }
 }
 
-a[target='_blank']:not(.nav-social-links a)::after {
-   content: '\2197';
+a[target="_blank"]:not(.nav-social-links a)::after {
+   content: "\2197";
    margin-left: 5px;
-   font-size: .8em;
+   font-size: 0.8em;
    display: inline-block;
    transition: transform var(--transition);
 }
 
-a[target='_blank']:hover::after {
+a[target="_blank"]:hover::after {
    transform: translate(3px, -3px);
 }
 
 html body .button,
 body a.wp-block-button__link {
-   background: none;
-   border: 2px solid var(--color-main-500);
-   border-radius: 0px;
+   font-size: 1rem;
+   background: var(--color-main-700);
+   //border: 2px solid var(--color-main-500);
+   border-radius: var(--border-radius);
    color: var(--color-main-500);
    padding: 10px 16px;
    margin: 10px 0px;
@@ -409,6 +415,16 @@ html body .button:hover,
 body a.wp-block-button__link:hover {
    transform: translateY(-5px);
    background-color: var(--color-main-900);
+}
+
+.buttons {
+   display: flex;
+   gap: var(--gap-sm);
+   margin: var(--gap-sm) 0px;
+
+   .button {
+      margin: 0px;
+   }
 }
 
 .jumbotron,
@@ -453,7 +469,7 @@ body a.wp-block-button__link:hover {
    color: var(--color-text);
 }
 
-.home-header .intro-text h1, 
+.home-header .intro-text h1,
 .home-header .intro-text .button {
    margin: var(--gap) 0px;
 }
@@ -461,8 +477,6 @@ body a.wp-block-button__link:hover {
 .page-header h1 {
    color: var(--color-main-500);
 }
-
-
 
 /* FOOTER */
 footer {
@@ -475,8 +489,6 @@ footer .nav-social-links {
    justify-content: center;
 }
 
-
-
 /* 404 PAGE */
 .error-404 {
    display: flex;
@@ -486,8 +498,6 @@ footer .nav-social-links {
    min-height: 60vh;
    text-align: center;
 }
-
-
 
 /* --- COMPONENTS --- */
 #blob {
@@ -511,6 +521,7 @@ footer .nav-social-links {
    transition: transform var(--transition);
    display: block;
    height: 100%;
+   border-radius: var(--border-radius);
 }
 
 .card i {
@@ -523,17 +534,17 @@ footer .nav-social-links {
 .card .date {
    color: var(--color-gray-500);
    text-transform: uppercase;
-   font-size: .8em;
+   font-size: 0.8em;
 }
 
 .card h3 {
    font-size: 1.2rem;
    color: var(--color-text);
-   margin-top: .5rem;
+   margin-top: 0.5rem;
 }
 
-.card p { 
-   font-size: .9em;
+.card p {
+   font-size: 0.9em;
 }
 
 .splide__slide:hover .card {
@@ -544,6 +555,7 @@ footer .nav-social-links {
 figure img {
    width: 100%;
    height: auto;
+   border-radius: var(--border-radius);
 }
 
 /* tags */
@@ -559,8 +571,8 @@ ul.tags li {
    background: var(--color-main-700);
    color: var(--color-text);
    padding: 4px 10px;
-   border-radius: 100px;
-   font-size: .8em;
+   border-radius: var(--border-radius);
+   font-size: 0.8em;
    margin: 5px 10px 5px 0px;
 }
 
@@ -583,7 +595,7 @@ ul.tags {
    .sass,
    .sql {
       &::before {
-         font-family: 'Bootstrap-icons';
+         font-family: "Bootstrap-icons";
          vertical-align: bottom;
          margin-right: 5px;
          color: var(--color-main-500);
@@ -591,52 +603,52 @@ ul.tags {
    }
 
    .css {
-      --color-main-500: hsla(199, 97%, 42%, 1.00);
-      --color-main-700: hsla(199, 97%, 42%, 0.10);
+      --color-main-500: hsla(199, 97%, 42%, 1);
+      --color-main-700: hsla(199, 97%, 42%, 0.1);
       &::before {
-         content: '\F742';
+         content: "\F742";
       }
    }
    .html {
-      --color-main-500: hsla(17, 86%, 55%, 1.00);
-      --color-main-700: hsla(17, 86%, 55%, 0.10);
+      --color-main-500: hsla(17, 86%, 55%, 1);
+      --color-main-700: hsla(17, 86%, 55%, 0.1);
       &::before {
-         content: '\F2C7';
+         content: "\F2C7";
       }
    }
    .wordpress {
-      --color-main-500: hsla(231, 68%, 48%, 1.00);
-      --color-main-700: hsla(231, 68%, 48%, 0.10);
+      --color-main-500: hsla(231, 68%, 48%, 1);
+      --color-main-700: hsla(231, 68%, 48%, 0.1);
       &::before {
-         content: '\F669';
+         content: "\F669";
       }
    }
    .javascript {
-      --color-main-500: hsla(50, 65%, 51%, 1.00);
-      --color-main-700: hsla(50, 65%, 51%, 0.10);
+      --color-main-500: hsla(50, 65%, 51%, 1);
+      --color-main-700: hsla(50, 65%, 51%, 0.1);
       &::before {
-         content: '\F74C';
+         content: "\F74C";
       }
    }
    .php {
-      --color-main-500: hsla(236, 26%, 57%, 1.00);
-      --color-main-700: hsla(236, 26%, 57%, 0.10);
+      --color-main-500: hsla(236, 26%, 57%, 1);
+      --color-main-700: hsla(236, 26%, 57%, 0.1);
       &::before {
-         content: '\F757';
+         content: "\F757";
       }
    }
    .sass {
-      --color-main-500: hsla(330, 50%, 50%, 1.00);
-      --color-main-700: hsla(330, 50%, 50%, 0.10);
+      --color-main-500: hsla(330, 50%, 50%, 1);
+      --color-main-700: hsla(330, 50%, 50%, 0.1);
       &::before {
-         content: '\F75F';
+         content: "\F75F";
       }
    }
    .sql {
-      --color-main-500: hsla(184, 50%, 50%, 1.00);
-      --color-main-700: hsla(184, 50%, 50%, 0.10);
+      --color-main-500: hsla(184, 50%, 50%, 1);
+      --color-main-700: hsla(184, 50%, 50%, 0.1);
       &::before {
-         content: '\F8C4';
+         content: "\F8C4";
       }
    }
 }
@@ -691,8 +703,8 @@ article.portfolio {
 }
 
 .skills p {
-   opacity: .7;
-   font-size: .9em;
+   opacity: 0.7;
+   font-size: 0.9em;
    text-transform: uppercase;
 }
 
@@ -700,6 +712,7 @@ article.portfolio {
    background-color: var(--color-main-900);
    padding: 20px;
    list-style-type: none;
+   border-radius: var(--border-radius);
 }
 
 .skills ul {
@@ -707,7 +720,7 @@ article.portfolio {
 }
 
 .skills li {
-   margin-bottom: .5em;
+   margin-bottom: 0.5em;
 }
 
 /* services */
@@ -741,6 +754,12 @@ article.portfolio {
    border: none;
    color: var(--color-text);
    width: 100%;
+   border-radius: var(--border-radius);
+}
+
+.form-contact input[type="submit"] {
+   border: 0px;
+   padding: 1rem 0px;
 }
 
 .form-contact p {
@@ -751,7 +770,7 @@ article.portfolio {
    display: block;
    transition: transform var(--transition);
    transform-origin: 20px 0px;
-   opacity: .8;
+   opacity: 0.8;
    padding: 20px;
 }
 
@@ -774,7 +793,7 @@ article.portfolio {
 .form-contact input:not(:placeholder-shown) ~ p,
 .form-contact textarea:focus ~ p,
 .form-contact textarea:not(:placeholder-shown) ~ p {
-   transform: translateY(-6px) scale(.6);
+   transform: translateY(-6px) scale(0.6);
 }
 
 .form-contact select {
@@ -830,7 +849,7 @@ article.portfolio {
    align-items: center;
    justify-content: center;
    z-index: 10000;
-   background-color: hsla(0, 0%, 0%, 0.70);
+   background-color: hsla(0, 0%, 0%, 0.7);
 }
 
 .popup-contact-contents {
@@ -852,7 +871,7 @@ article.portfolio {
       font: inherit;
       cursor: pointer;
       outline: inherit;
-      opacity: .6;
+      opacity: 0.6;
 
       i {
          font-size: 1.8em;
@@ -863,7 +882,7 @@ article.portfolio {
       margin-top: auto;
       margin-bottom: var(--gap);
    }
-   
+
    ul {
       list-style-type: none;
       padding: 0px;
@@ -877,7 +896,7 @@ article.portfolio {
          color: var(--color-bg);
 
          &::after {
-            content: '\2192';
+            content: "\2192";
             transition: transform var(--transition);
          }
 
@@ -915,7 +934,6 @@ article.portfolio {
    }
 }
 
-
 /* --- PORTFOLIO PAGE --- */
 .full-screen-image img {
    aspect-ratio: 16 / 9;
@@ -947,7 +965,6 @@ article.portfolio {
    }
 }
 
-
 /* --- SCREENS BIGGER THAN 980PX --- */
 @media only screen and (min-width: 980px) {
    :root {
@@ -955,12 +972,12 @@ article.portfolio {
       --gap: 40px;
       --gap-sm: 20px;
    }
-   
+
    h1,
    .h1 {
       font-size: 3rem;
    }
-   
+
    h2,
    .h2 {
       font-size: 2rem;
@@ -979,13 +996,13 @@ article.portfolio {
       width: 200px;
       max-width: 30%;
    }
-   
+
    h3,
    .h3 {
       font-size: 1.2rem;
       margin-top: 2rem;
    }
-   
+
    h4,
    .h4 {
       text-transform: uppercase;
@@ -999,12 +1016,12 @@ article.portfolio {
    .wp-grid-2 > div {
       grid-template-columns: 1fr 1fr;
    }
-   
+
    .grid-3,
    .wp-grid-3 > div {
       grid-template-columns: 1fr 1fr 1fr;
    }
-   
+
    .grid-4,
    .wp-grid-4 > div {
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1024,7 +1041,7 @@ article.portfolio {
    .home-header .intro-text h1 {
       font-size: 2em;
    }
-   
+
    .home-header .wrapper img {
       margin: auto;
       width: 100%;
@@ -1040,6 +1057,7 @@ article.portfolio {
 
    .jumbotron {
       padding: var(--gap-lg) calc(var(--gap-lg) * 2);
+      border-radius: var(--border-radius);
    }
 
    .contact {
@@ -1060,16 +1078,12 @@ article.portfolio {
    }
 }
 
-
-
 /* || IOS DEVICES */
 @supports (-webkit-touch-callout: none) {
    header {
       background-attachment: scroll;
    }
 }
-
-
 
 /* NO TRANSITION FOR REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
@@ -1080,8 +1094,6 @@ article.portfolio {
    }
 }
 
-
-
 /* ANIMATIONS */
 @media (prefers-reduced-motion: no-preference) {
    #popup-contact .zoom-in {
@@ -1090,12 +1102,12 @@ article.portfolio {
    }
 
    #popup-contact .zoom-out {
-      animation: zoom .5s ease-in 0s 1 reverse forwards;
+      animation: zoom 0.5s ease-in 0s 1 reverse forwards;
       //display: none;
    }
 
    .popup-contact-contents li {
-      -webkit-transform:translate3d(0,0,0);
+      -webkit-transform: translate3d(0, 0, 0);
       opacity: 0;
       animation: float-up var(--transition) forwards;
 
@@ -1157,7 +1169,7 @@ article.portfolio {
       width: 500px;
       fill: var(--color-main-500);
       filter: blur(68px);
-      opacity: .05;
+      opacity: 0.05;
       position: fixed;
       top: -250px;
       left: -250px;

@@ -1,7 +1,7 @@
 
 <?php
-/* Template Name: Share the Dream
- * Template Post Type: post, page
+/* Template Name: Portfolio
+ * Template Post Type: post
  */
 
 get_header();
@@ -10,10 +10,19 @@ get_header();
     <div class="wrapper wrapper-narrow page-header">
         <h1><?php the_title(); ?></h1>
         <p><strong><?php echo get_the_date('F Y') ?></strong></p>
-        <p>
-            <?php the_excerpt(); ?>
-            <a href="<? echo get_post_meta( get_the_ID(), 'website_link' )[0] ?>" target="_blank" class="button">view the project</a>
-        </p>
+        <?php the_excerpt(); 
+            $website = get_post_meta( get_the_ID(), 'website_link' )[0];
+            $github = get_post_meta( get_the_ID(), 'github_link' )[0];
+        ?>
+        <div class="buttons">
+            <a href="<? echo get_post_meta( get_the_ID(), 'website_link' )[0] ?>" target="_blank" class="button">View Website</a>
+            <?php if($github) : ?>
+            <a href="<? echo $github; ?>" target="_blank" class="button">
+                <i class="bi bi-github"></i>&nbsp;
+                View on GitHub
+            </a>
+            <?php endif; ?>
+        </div>
     </div>
 </header>
 <main>
