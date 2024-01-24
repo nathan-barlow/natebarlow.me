@@ -565,6 +565,7 @@ ul.tags {
    margin-top: 20px;
    display: flex;
    flex-wrap: wrap;
+   gap: 10px;
 }
 
 ul.tags li {
@@ -573,7 +574,6 @@ ul.tags li {
    padding: 4px 10px;
    border-radius: var(--border-radius);
    font-size: 0.8em;
-   margin: 5px 10px 5px 0px;
 }
 
 ul.portfolio-tags li {
