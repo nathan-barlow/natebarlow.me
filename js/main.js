@@ -1,4 +1,5 @@
-console.log("Fancy seeing you here! I hope you are enjoying my portfolio.");
+console.clear();
+console.log("👋 Fancy seeing you here! I hope you are enjoying my portfolio.");
 
 // THEME ------------------------------------------------------------------------------------------
 const themeBtn = document.querySelector(".theme");

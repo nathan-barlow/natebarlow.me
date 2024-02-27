@@ -6,10 +6,6 @@ get_header();
     <div class="wrapper wrapper-narrow page-header">
         <h1><?php the_title(); ?></h1>
         <p><strong><?php echo get_the_date('F Y') ?></strong></p>
-        <p>
-            <?php the_excerpt(); ?>
-            <a href="<? echo get_post_meta( get_the_ID(), 'website_link' )[0] ?>" target="_blank" class="button">view the project</a>
-        </p>
     </div>
 </header>
 <main>

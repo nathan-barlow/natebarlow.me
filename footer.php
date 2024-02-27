@@ -7,7 +7,7 @@
                 <i class="bi bi-github"></i>&nbsp; View this page on GitHub
             </a>
             
-            <a href="https://www.vecteezy.com/free-vector/website">Website Vectors by Vecteezy</a>
+            <a class="small" href="https://www.vecteezy.com/free-vector/website">Website Vectors by Vecteezy</a>
         </footer>
         
         <?php

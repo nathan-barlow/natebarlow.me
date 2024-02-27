@@ -5,15 +5,16 @@
  */
 
 get_header();
+
+$website = get_post_meta( get_the_ID(), 'website_link' )[0];
+$github = get_post_meta( get_the_ID(), 'github_link' )[0];
+$testimonial = get_post_meta( get_the_ID(), 'testimonial' )[0];
 ?>
 
     <div class="wrapper wrapper-narrow page-header">
         <h1><?php the_title(); ?></h1>
-        <p><strong><?php echo get_the_date('F Y') ?></strong></p>
-        <?php the_excerpt(); 
-            $website = get_post_meta( get_the_ID(), 'website_link' )[0];
-            $github = get_post_meta( get_the_ID(), 'github_link' )[0];
-        ?>
+        <p><i class="bi bi-calendar mr-sm"></i><strong><?php echo get_the_date('F Y') ?></strong></p>
+        <?php the_excerpt(); ?>
         <div class="buttons">
             <a href="<? echo get_post_meta( get_the_ID(), 'website_link' )[0] ?>" target="_blank" class="button">View Website</a>
             <?php if($github) : ?>
@@ -30,6 +31,13 @@ get_header();
     
     <div class="wrapper wrapper-narrow blog">
         <section>
+            <?php if($testimonial) : ?>
+            <article class="testimonial">
+                <p>
+                    <? echo $testimonial ?>
+                </p>
+            </article>
+            <?php endif; ?>
             <figure>
                 <?php the_post_thumbnail('card-large'); ?>
             </figure>

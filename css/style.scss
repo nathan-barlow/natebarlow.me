@@ -4,7 +4,7 @@ Theme URI: https://www.natebarlow.me
 Description: NB Portfolio WordPress Theme
 Author: Nathan Barlow
 Author URI: https://www.natebarlow.me
-Version: 1.2
+Version: 1.2.1
 
 Tags: portfolio
 
@@ -153,7 +153,9 @@ a img.aligncenter {
 }
 
 :root {
-   --font-system: "Outfit", -apple-system, Roboto, Oxygen-Sans, Ubuntu,
+   --font-system: "Albert Sans", -apple-system, Roboto, Oxygen-Sans, Ubuntu,
+      Cantarell, "Helvetica Neue", sans-serif;
+   --font-secondary: "Barlow", -apple-system, Roboto, Oxygen-Sans, Ubuntu,
       Cantarell, "Helvetica Neue", sans-serif;
    --hue: 233;
    --color-main-500: hsl(var(--hue), 100%, 38%); // main color, most contrast
@@ -174,7 +176,7 @@ a img.aligncenter {
    --gap-lg: 2rem;
    --gap: 1rem;
    --gap-sm: 0.5rem;
-   --box-shadow: 0px 4px 1rem rgba(0, 0, 0, 0.1);
+   --box-shadow: 0.25rem 0.25rem 2rem rgba(0, 0, 0, 0.15);
    --mode: 0;
    --transition: 500ms cubic-bezier(0.8, 0, 0.2, 1);
 }
@@ -190,6 +192,7 @@ a img.aligncenter {
       --color-bg-transparent: hsla(var(--hue), 30%, 4%, 0.8);
       --color-text: white;
       --mode: 1;
+      --box-shadow: 0.25rem 0.25rem 2rem rgba(227, 230, 250, 0.15);
    }
 }
 
@@ -201,6 +204,7 @@ a img.aligncenter {
    --color-bg-transparent: hsla(var(--hue), 100%, 99%, 0.8);
    --color-text: black;
    --mode: 0;
+   --box-shadow: 0.25rem 0.25rem 2rem rgba(0, 0, 0, 0.15);
 }
 
 [color-scheme="dark"] {
@@ -212,6 +216,7 @@ a img.aligncenter {
    --color-bg-transparent: hsla(var(--hue), 30%, 4%, 0.8);
    --color-text: white;
    --mode: 1;
+   --box-shadow: 0.25rem 0.25rem 2rem rgba(227, 230, 250, 0.15);
 }
 
 #custom-header {
@@ -263,6 +268,10 @@ body {
    font-family: var(--font-system);
    background: var(--color-bg);
    color: var(--color-text);
+
+   p {
+      font-family: var(--font-secondary);
+   }
 }
 
 section {
@@ -366,6 +375,14 @@ article {
    margin-top: 0px !important;
 }
 
+.mr-sm {
+   margin-right: 0.5rem;
+}
+
+.small {
+   font-size: 0.8em;
+}
+
 .border-top {
    border-top: 1px solid var(--color-text);
 }
@@ -374,11 +391,12 @@ h1,
 .h1 {
    color: var(--color-main-500);
    font-size: 2rem;
-   font-weight: 800;
+   font-weight: 900;
 }
 
 h2,
 .h2 {
+   font-weight: 900;
    margin-top: calc(var(--gap) * 1.5);
    margin-bottom: 0.5rem;
 }
@@ -432,7 +450,8 @@ a:not(
       .card,
       .nav-social-links a,
       .icon-only,
-      .dialog-contents a
+      .dialog-contents a,
+      .tags a
    ) {
    text-decoration: none;
    background-image: linear-gradient(
@@ -646,6 +665,22 @@ footer .nav-social-links {
 
 .splide__slide:hover .card {
    transform: translateY(-5px);
+}
+
+/* testimonial */
+.testimonial {
+   background: url("/wp-content/uploads/2024/02/quote.svg");
+   background-repeat: no-repeat;
+   background-color: var(--color-main-900);
+   border-radius: var(--border-radius);
+   padding: 1rem 1rem 1rem 3.6rem;
+   margin-bottom: var(--gap-sm);
+   box-shadow: var(--box-shadow);
+
+   p {
+      margin: 0px;
+      font-style: italic;
+   }
 }
 
 /* images */
