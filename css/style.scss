@@ -4,7 +4,7 @@ Theme URI: https://www.natebarlow.me
 Description: NB Portfolio WordPress Theme
 Author: Nathan Barlow
 Author URI: https://www.natebarlow.me
-Version: 1.1
+Version: 1.2
 
 Tags: portfolio
 
@@ -634,7 +634,7 @@ footer .nav-social-links {
    font-size: 0.8em;
 }
 
-.card h3 {
+.card .h3 {
    font-size: 1.2rem;
    color: var(--color-text);
    margin-top: 0.5rem;
@@ -761,6 +761,8 @@ article.portfolio {
    position: absolute;
    top: 0;
    right: 0;
+   display: flex;
+   gap: var(--gap-sm);
 }
 
 .splide__arrow {
@@ -861,6 +863,7 @@ article.portfolio {
    background-color: var(--color-main-900);
    grid-gap: 0px;
    scroll-margin-top: 100px;
+   border-radius: var(--border-radius);
 
    p:not(:first-of-type) {
       margin-top: 0px;
@@ -954,7 +957,7 @@ article.portfolio {
       margin-top: var(--gap);
       position: sticky;
       top: 100px;
-      height: calc(100svh - 100px);
+      border-radius: var(--border-radius);
 
       h3 {
          margin-top: var(--gap);
@@ -1335,6 +1338,10 @@ article.portfolio {
 
    .splide__arrow {
       font-size: 1.5em;
+   }
+
+   #active_services_container {
+      height: calc(100svh - 100px);
    }
 }
 

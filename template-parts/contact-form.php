@@ -102,7 +102,7 @@ if (isset($_POST['email'])) {
     </label>
 
     <label class="form-full-width" for="budget">
-        <select name="budget" id="budget">
+        <select name="budget" id="budget" aria-label="What is your budget?">
             <option value="">What is your budget?</option>
             <option value="500">$500</option>
             <option value="1000">$1000</option>

@@ -9,9 +9,9 @@
                     <?php the_date('F Y') ?>
                     <span class="tag ml-auto">FEATURED</span>
                 </span>
-                <h3 class="card-title">
+                <h2 class="h3 card-title">
                     <?php the_title(); ?>
-                </h3>
+                </h2>
                 <p>
                     <?php the_excerpt(); ?>
                 </p>

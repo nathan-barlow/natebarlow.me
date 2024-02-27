@@ -23,7 +23,7 @@ get_header();
                 <div class="services-icon">
                     <i class="bi bi-wordpress"></i>
                 </div>
-                <h3>Full Website</h3>
+                <h2 class="h3">Full Website</h2>
                 <p>
                     Starting from scratch or fully overhauling your current website? I’ll meet with you to discuss your business needs and do market research to determine the design and functionality you’ll need for your site. Once we’ve determined a design, I’ll develop a custom WordPress template for your site that looks good and functions well on every device. I’ll make sure the site follows best accessibility and SEO standards.
                 </p>
@@ -33,7 +33,7 @@ get_header();
                 <div class="services-icon">
                     <i class="bi bi-circle-square"></i>
                 </div>
-                <h3>Web Design</h3>
+                <h2 class="h3">Web Design</h2>
                 <p>
                     I’ll work with you to create a website design for each of the pages you’ll need for your website. You’ll play an active role in choosing the design and can easily let me know what you like and don’t like. You can send these files to your developer for them to create your website.
                 </p>
@@ -46,7 +46,7 @@ get_header();
                 <div class="services-icon">
                     <i class="bi bi-code-slash"></i>
                 </div>
-                <h3>Web Development</h3>
+                <h2 class="h3">Web Development</h2>
                 <p>
                     Do you already have website design files? I’ll create a custom HTML or WordPress website based on that design that looks good and functions well on every device. We will meet to discuss any extra functionality you need: including social media integration, blog, and other custom functions. I’ll make sure the site follows best accessibility and SEO standards.
                 </p>
@@ -64,7 +64,7 @@ get_header();
                 <!-- Service Inputs -->
                 <h3 class="flex flex-sm">
                     Which service do you need?
-                    <a class="icon-only" href="#full-website">
+                    <a class="icon-only" href="#full-website" title="More info about services">
                         <i class="bi bi-question-circle"></i>
                     </a>
                 </h3>
@@ -92,7 +92,7 @@ get_header();
                 <!-- Pages Inputs -->
                 <h3 class="flex flex-sm">
                     How many pages do you need?
-                    <button type="button" class="icon-only" onclick="showModal('pages_dialog')">
+                    <button type="button" class="icon-only" onclick="showModal('pages_dialog')" title="More info about pages">
                         <i class="bi bi-question-circle"></i>
                     </button>
                 </h3>
@@ -126,7 +126,7 @@ get_header();
 
                 <h3 class="flex flex-sm">
                     Do you need any additional features?
-                    <button type="button" class="icon-only" onclick="showModal('features_dialog')">
+                    <button type="button" class="icon-only" onclick="showModal('features_dialog')" title="More info about additional features">
                         <i class="bi bi-question-circle"></i>
                     </button>
                 </h3>
