@@ -42,8 +42,22 @@ get_header();
             </ul>
             <?php the_content(); ?>
         </section>
-        <?php endwhile; else: endif; ?>
     </div>
+
+    <div class="wrapper">
+        <section>
+            <div class="jumbotron">
+                <h2>Why should you hire me?</h2>
+                <p>I am a motivated, detail-oriented working who can deliver quality work in a fast-paced and deadline-driven environment. I’m also a quick learner and have a tendency to exceed expectations. If you put me in charge of your website, I won’t stop until you are satisfied with the final product.</p>
+                <div class="buttons center">
+                    <a href="/about-me" class="button">More about me</a>
+                    <a href="/services" class="button button-secondary">See what I have to offer</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <?php endwhile; else: endif; ?>
 </main>
 
 <script>

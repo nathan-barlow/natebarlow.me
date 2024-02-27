@@ -24,7 +24,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    </noscript>
+
+    <script defer type="application/ld+json">
+        {
+            "@context" : "https://natebarlow.me",
+            "@type" : "WebSite",
+            "name" : "Nate Barlow",
+            "url" : "https://natebarlow.me/"
+        }
+    </script>
 
     <?php wp_head(); ?>
 </head>

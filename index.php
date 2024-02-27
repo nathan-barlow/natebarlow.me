@@ -11,15 +11,18 @@ get_header( 'home' );
                 I design and develop responsive, accessible websites.
             </h2>
 
-            <a class="button" href="portfolio">See My Work</a>
+            <div class="flex flex-center flex-sm hero-buttons">
+                <a class="button" href="portfolio">See my work</a>
+                <a class="button button-secondary" href="services">Services I offer</a>
+            </div>
         </div>
         <figure class="center">
-            <img src="/wp-content/uploads/2023/03/nate-bw.png" alt="emoji of me">
+            <img src="/wp-content/uploads/2024/02/hero-vector.webp" alt="vector of pople making websites">
         </figure>
     </div>
 </header>
 <div id="popup-contact">
-    <div class="popup-contact-contents">
+    <div class="popup-contact-contents dialog-contents">
         <button onclick="closePopup()"><i class="bi bi-x"></i></button>
         <h2>Welcome to my website!</h2>
         <ul>
@@ -57,19 +60,6 @@ get_header( 'home' );
     </div>
 </div>
 <main class="wrapper">
-    <article class="grid grid-2 grid-about-me">
-        <div>
-            <h2 class="trail">About Me</h2>
-            <p>
-                Hello! My name is Nate and I recently graduated from Northeast Wisconsin Technical College with my Associate's Degree in Web Development. I found my passion for coding and designing websites in high school when I took an HTML and CSS class. I played around with it in my free time and loved seeing what I could create, so I decided to pursue it as a career. I have always been fascinated by technology, and I am eager to pursue a role where I can be challenged and continue to learn about it every day.
-            </p>
-            <a class="button" href="about-me">More About Me</a>
-        </div>
-        <figure>
-            <img src="/wp-content/uploads/2023/03/chicago.jpg" alt="me in front of Chicago skyline">
-        </figure>
-    </article>
-
     <article id="portfolio" class="splide" aria-label="Portfolio Slideshow Container">
         <h2 class="trail">My Work</h2>
         <section>
@@ -105,6 +95,19 @@ get_header( 'home' );
                 </ol>
             </div>
         </section>
+    </article>
+
+    <article class="grid grid-2 grid-about-me">
+        <div>
+            <h2 class="trail">About Me</h2>
+            <p>
+                Hello! My name is Nate and I recently graduated from Northeast Wisconsin Technical College with my Associate's Degree in Web Development. I found my passion for coding and designing websites in high school when I took an HTML and CSS class. I played around with it in my free time and loved seeing what I could create, so I decided to pursue it as a career. I have always been fascinated by technology, and I am eager to pursue a role where I can be challenged and continue to learn about it every day.
+            </p>
+            <a class="button" href="about-me">More About Me</a>
+        </div>
+        <figure>
+            <img src="/wp-content/uploads/2023/03/chicago.jpg" alt="me in front of Chicago skyline">
+        </figure>
     </article>
 
     <article hidden>

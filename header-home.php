@@ -16,18 +16,30 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="application-name" content="Nate Barlow">
-    <meta name="description" content="I'm a front-end web developer and designer with experience developing custom WordPress themes.">
+    <meta name="description" content="I'm an experienced front-end web developer and designer based in Appleton, WI with experience developing custom WordPress websites for small businesses.">
 
     <!--Google font (outfit)-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Bootstrap Icons + Splide -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="/wp-content/themes/natebarlow-portfolio/css/splide-core.min.css" onload="this.onload=null;this.rel='stylesheet'">
 
-    <!-- Splide -->
-    <link rel="stylesheet" href="/wp-content/themes/natebarlow-portfolio/css/splide-core.min.css">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="/wp-content/themes/natebarlow-portfolio/css/splide-core.min.css">
+    </noscript>
+
+    <script defer type="application/ld+json">
+        {
+            "@context" : "https://natebarlow.me",
+            "@type" : "WebSite",
+            "name" : "Nate Barlow",
+            "url" : "https://natebarlow.me/"
+        }
+    </script>
 
     <?php wp_head(); ?>
 

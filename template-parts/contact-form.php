@@ -2,7 +2,7 @@
 require_once('google-recaptcha-library.php');
 
 if (isset($_POST['email'])) {
-    $email_to = "nbarlow66@gmail.com";
+    $email_to = "nate@natebarlow.me";
     $form_error = false;
 
     function problem($error)
@@ -93,12 +93,12 @@ if (isset($_POST['email'])) {
 <form class="form-contact grid grid-2" method="post" action="#">
     <label>
         <input id="firstName" name="firstName" type="text" autocomplete="given-name" required placeholder=" ">
-        <p>First Name</p>
+        <p class="fancy-placeholder">First Name</p>
     </label>
 
     <label>
         <input id="lastName" name="lastName" type="text" autocomplete="family-name" required placeholder=" ">
-        <p>Last Name</p>
+        <p class="fancy-placeholder">Last Name</p>
     </label>
 
     <label class="form-full-width" for="budget">
@@ -113,17 +113,17 @@ if (isset($_POST['email'])) {
 
     <label class="form-full-width">
         <input id="email" name="email"  type="email" autocomplete="email" required placeholder=" ">
-        <p>Email</p>
+        <p class="fancy-placeholder">Email</p>
     </label>
 
     <label class="form-full-width">
         <input id="subject" name="subject" type="text" required placeholder=" ">
-        <p>Subject</p>
+        <p class="fancy-placeholder">Subject</p>
     </label>
 
     <label class="form-full-width">
         <textarea name="message" id="message" cols="30" rows="10" required placeholder=" "></textarea>
-        <p>Message</p>
+        <p class="fancy-placeholder">Message</p>
     </label>
 
     <label class="form-full-width">

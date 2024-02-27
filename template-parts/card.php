@@ -1,4 +1,4 @@
-<li class="splide__slide hide-float-up stagger-2">
+<li class="splide__slide stagger-2">
     <a class="card-link card" href="<?php the_permalink(); ?>" title="View <?php the_title_attribute(); ?>">
         <figure class="card-figure">
             <?php the_post_thumbnail('card-medium'); ?>
