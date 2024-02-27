@@ -10,7 +10,10 @@ const active_features = {
       custom: 1200,
       per_page: 200,
    },
-   base_features: ["14 days support after site goes live"],
+   base_features: [
+      "14 days support after site goes live",
+      "Assistance with domain name and hosting selection",
+   ],
    features: [],
 };
 
@@ -58,7 +61,7 @@ const descriptions = {
                "A single page static website designed and developed from the ground up.",
             multi: "Just the right amount of pages for a standard website. You'll receive a fully designed and developed website suited for your business needs.",
             custom:
-               "Choose as many pages as you need for your website. A website completely suited to yours or your business's needs. $1200 for 5 pages and each additional page is $200. Not sure exactly how many pages you need? Let me know in your message and I'll help you figure out exactly what you need.",
+               "Choose as many pages as you need for your website. A website completely suited to yours or your business's needs. $1000 for 5 pages and each additional page is $200. Not sure exactly how many pages you need? Let me know in your message and I'll help you figure out exactly what you need.",
          },
          features: {
             blog: "Enhance your online presence with a custom-designed blog. Engage your audience with regular updates, news, and valuable content. I'll walk you through how to easily add new pages.",
@@ -68,14 +71,16 @@ const descriptions = {
                "Build a loyal community by integrating a mailing list service, such as Brevo. Keep your audience informed with newsletters, promotions, and exclusive content.",
             contact_form:
                "Foster communication and feedback through a user-friendly contact form. Streamline inquiries and make it easy for visitors to connect with you.",
-            custom_features: "",
+            custom_features:
+               "Tailor your website to meet unique requirements with custom features. Unlock personalized solutions for a distinct online presence. Let me know what you're looking to achieve and I'll give you an estimate for how much it'll cost.",
          },
       },
       design: {
          pages: {
-            single: "",
-            multi: "",
-            custom: "",
+            single: "A single page static website designed from the ground up.",
+            multi: "Just the right amount of pages for a standard website. You'll receive custom design files for a 2-4 page website.",
+            custom:
+               "You'll receive custom design files for as many pages as you need.",
          },
          features: {
             blog: "Not available for projects exclusively focused on design. However, should you require blog design services, no supplementary charges will be applied.",
@@ -89,16 +94,22 @@ const descriptions = {
       },
       development: {
          pages: {
-            single: "",
-            multi: "",
-            custom: "",
+            single:
+               "Already have design files? You'll receive a single page static HTML website based on the design you provide.",
+            multi: "I'll create a fully functioning 2-4 page dynamic WordPress site based on the design files you provide.",
+            custom:
+               "I'll create a fully functioning dynamic WordPress site based on the design files you provide.",
          },
          features: {
-            blog: "",
-            hosting: "",
-            mailing_list: "",
-            contact_form: "",
-            custom_features: "",
+            blog: "Enhance your online presence with a custom-designed blog. Engage your audience with regular updates, news, and valuable content. I'll walk you through how to easily add new pages.",
+            hosting:
+               "Ensure a seamless online experience for your visitors with reliable and secure hosting services. Enjoy fast loading times and optimal performance.",
+            mailing_list:
+               "Build a loyal community by integrating a mailing list service, such as Brevo. Keep your audience informed with newsletters, promotions, and exclusive content.",
+            contact_form:
+               "Foster communication and feedback through a user-friendly contact form. Streamline inquiries and make it easy for visitors to connect with you.",
+            custom_features:
+               "Tailor your website to meet unique requirements with custom features. Unlock personalized solutions for a distinct online presence. Let me know what you're looking to achieve and I'll give you an estimate for how much it'll cost.",
          },
       },
    },

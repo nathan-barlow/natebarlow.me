@@ -148,15 +148,15 @@ get_header();
                     </label>
 
                     <label for="features_mailing_list">
-                        <input type="checkbox" id="features_mailing_list" name="features[]" data-price="150" value="mailing list" data-features="[7]">
-                        <p><i class="bi bi-envelope-check"></i>Mailing List</p>
-                        <span>$150</span>
+                        <input type="checkbox" id="features_mailing_list" name="features[]" data-price="100" value="mailing list" data-features="[7]">
+                        <p><i class="bi bi-envelope-check"></i>Mailing List Integration</p>
+                        <span>$100</span>
                     </label>
 
                     <label for="features_contact_form">
                         <input type="checkbox" id="features_contact_form" name="features[]" data-price="0" value="contact form" data-features="[3]">
                         <p><i class="bi bi-person-lines-fill"></i></i>Contact Form</p>
-                        <span>INCLUDED</span>
+                        <span>$0</span>
                     </label>
 
                     <label for="features_custom">
@@ -256,20 +256,28 @@ get_header();
 
             <h3>Blog</h3>
             <p id="features_blog_description">
-
+                Enhance your online presence with a custom-designed blog. Engage your audience with regular updates, news, and valuable content. I'll walk you through how to easily add new pages.
             </p>
 
             <h3>Hosting</h3>
-            <p id="features_hosting_description"></p>
+            <p id="features_hosting_description">
+                Ensure a seamless online experience for your visitors with reliable and secure hosting services. Enjoy fast loading times and optimal performance.
+            </p>
 
             <h3>Mailing List</h3>
-            <p id="features_mailing_list_description"></p>
+            <p id="features_mailing_list_description">
+                Build a loyal community by integrating a mailing list service, such as Brevo. Keep your audience informed with newsletters, promotions, and exclusive content.
+            </p>
 
             <h3>Contact Form</h3>
-            <p id="features_contact_form_description"></p>
+            <p id="features_contact_form_description">
+                Foster communication and feedback through a user-friendly contact form. Streamline inquiries and make it easy for visitors to connect with you.
+            </p>
 
             <h3>Custom Features</h3>
-            <p id="features_custom_features_description"></p>
+            <p id="features_custom_features_description">
+                Tailor your website to meet unique requirements with custom features. Unlock personalized solutions for a distinct online presence. Let me know what you're looking to achieve and I'll give you an estimate for how much it'll cost.
+            </p>
         </div>
     </div>
 </dialog>
